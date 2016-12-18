@@ -6,18 +6,18 @@ import org.testng.annotations.Test;
 public class LetterTest extends BaseTest {
     @Test
     public void sendingLetterSubjectTest() throws Exception {
-        iUaLogInPage.signIn(I_UALOGIN, I_UAPASSWORD)
-                .sendLetter(testBox, subject, letterText)
-                .searchSentLetter(testBox)
-                .nameAndSubjectAssertEquals(subject, addresser);
+        iUaLogInPage.signIn()
+                .sendLetter()
+                .searchSentLetter()
+                .nameAndSubjectAssertEquals();
     }
 
     @Test
     public void letterBodyTest() throws Exception {
-        iUaLogInPage.signIn(I_UALOGIN, I_UAPASSWORD)
-                .sendLetter(testBox, subject, letterText)
-                .searchSentLetter(testBox)
+        iUaLogInPage.signIn()
+                .sendLetter()
+                .searchSentLetter()
                 .clickOnLetter()
-                .letterBodyAssertEquals(letterTextWithAdds);
+                .letterBodyAssertEquals();
     }
 }

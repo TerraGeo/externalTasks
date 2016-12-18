@@ -16,6 +16,9 @@ public class LetterPreviewPage extends Page {
     public LetterPreviewPage(WebDriver driver) {
         super(driver);
     }
+    protected static final String addresser = "Сергей";
+    protected static final String subject = "TestedText";
+
     @FindBy(xpath = "//div[@title='FROM:']/div")
     WebElement addresserName;
     @FindBy(xpath = "//div[@class='innermail ng-binding']")
@@ -26,8 +29,8 @@ public class LetterPreviewPage extends Page {
         waitForClickableElement(addresserName).click();
         return new LetterBodyPage(Page.getDriver());
     }
-    public void nameAndSubjectAssertEquals(String letterSubject, String addresser){
+    public void nameAndSubjectAssertEquals(){
         Assert.assertEquals(addresserName.getText(), addresser);
-        Assert.assertEquals(letterElements.get(2).getText(), letterSubject);
+        Assert.assertEquals(letterElements.get(2).getText(), subject);
     }
 }

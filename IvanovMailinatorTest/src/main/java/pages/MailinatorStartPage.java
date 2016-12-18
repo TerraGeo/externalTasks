@@ -13,14 +13,16 @@ public class MailinatorStartPage extends Page {
     public MailinatorStartPage(WebDriver driver) {
         super(driver);
     }
+    protected static final String testBoxName = "qaGalProtector";
+
     @FindBy(id = "inboxfield")
     WebElement letterSearchField;
     @FindBy(xpath = "//button[@class='btn btn-dark']")
     WebElement searchLetterButton;
 
-    public LetterPreviewPage searchSentLetter(String boxName){
+    public LetterPreviewPage searchSentLetter(){
         Page.getDriver().get("https://www.mailinator.com/");
-        waitForClickableElement(letterSearchField).sendKeys(boxName);
+        waitForClickableElement(letterSearchField).sendKeys(testBoxName);
         searchLetterButton.click();
         return new LetterPreviewPage(Page.getDriver());
     }

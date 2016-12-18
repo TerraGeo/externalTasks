@@ -13,6 +13,10 @@ public class LetterSenderPage extends Page {
     public LetterSenderPage(WebDriver driver) {
         super(driver);
     }
+    protected static final String letterText = "Hey, Mister! Nice weather outside!";
+    protected static final String subject = "TestedText";
+    protected static final String testBox = "qaGalProtector@mailinator.com";
+
     @FindBy(xpath = "//p[@class='make_message']/a")
     WebElement composeButton;
     @FindBy(name = "to")
@@ -24,11 +28,11 @@ public class LetterSenderPage extends Page {
     @FindBy(xpath = "//input[@tabindex='12']")
     WebElement sendButton;
 
-    public MailinatorStartPage sendLetter(String to, String subject, String text){
+    public MailinatorStartPage sendLetter(){
         waitForClickableElement(composeButton).click();
-        addressantField.sendKeys(to);
+        addressantField.sendKeys(testBox);
         subjectField.sendKeys(subject);
-        emailField.sendKeys(text);
+        emailField.sendKeys(letterText);
         sendButton.click();
         return new MailinatorStartPage(Page.getDriver());
     }
