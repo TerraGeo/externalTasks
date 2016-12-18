@@ -10,9 +10,9 @@
 
         <documentTitle>AutomationTesting.in</documentTitle>
 
-        <reportName>Automation Testing Report</reportName>
+        <reportName>Mailinator Testing Report</reportName>
 
-        <reportHeadline> -QA Environment</reportHeadline>
+        <reportHeadline> -TestLetter Environment</reportHeadline>
 
         <dateFormat>yyyy-MM-dd</dateFormat>
 

@@ -39,7 +39,7 @@ public class ListenerForTest extends TestListenerAdapter implements IInvokedMeth
 
     @Override
     public void onStart(ISuite iSuite) {
-        extentReports = new ExtentReports(System.getProperty("user.dir") + "/test-output/testReport.html", true);
+        extentReports = new ExtentReports(System.getProperty("user.dir") + "/reports/testReport.html", true);
         extentReports.addSystemInfo("HostName", "Billy")
                 .addSystemInfo("Environment", "TestLetter")
                 .addSystemInfo("User Name", "Billy");
