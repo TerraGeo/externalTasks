@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
  */
 public class LetterTest extends BaseTest {
     @Test
-    public void sendingLetterSubjectTest() throws Exception {
+    public void sendingLetterSubjectTest(){
         iUaLogInPage.signIn()
                 .sendLetter()
                 .searchSentLetter()
@@ -13,7 +13,7 @@ public class LetterTest extends BaseTest {
     }
 
     @Test
-    public void letterBodyTest() throws Exception {
+    public void letterBodyTest() {
         iUaLogInPage.signIn()
                 .sendLetter()
                 .searchSentLetter()
