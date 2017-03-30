@@ -1,0 +1,36 @@
+body {
+	background-color : #FAF6C4;
+	font-size : 18px;
+}
+<--F2ECD2 D5AF63-->
+#navbarMenu {
+	position: fixed; 
+	top: 0px;
+}
+
+#pageTitle {
+	text-align : center;
+	font-size : 42px;
+	font-weight : bold;
+}
+
+.topics {
+	text-align : center;
+}
+
+.pageImg {
+	margin : 10px; 
+	width : 265px;
+	height : 182px;
+}
+
+#footerText {
+	color : #827D7D; 
+	text-align : center;
+}
+
+#goUpLink {
+	text-align : center;
+	font-weight : bold;
+	font-size : 20px;
+}
